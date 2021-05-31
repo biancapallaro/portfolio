@@ -1,0 +1,26 @@
+name: Bianca Pallaro
+bio: Data journalist at LA NACION DATA. I am currently pursuing a Master's Degree in Data Journalism at Columbia University.
+links:
+  - target: mailto:biancapallaro@gmail.com
+    text: Contact me
+  - target: https://twitter.com/biancapallaro
+    text: '@biancapallaro'
+pages:
+  - type: gdoc
+    image: 
+    title: Bronx is the only borough where new HIV diagnoses are on the rise
+    slug: Bronx-HIV
+    url: https://docs.google.com/document/d/1izOM2-IYei5qoR_5rIzuE6f5xVWZC97XZiY0DS1U6FE/edit?usp=sharing
+  - type: gdoc
+    image:
+    title: Nevada’s identity thefts spiked during covid-19
+    slug: Cybercrimes-Nevada
+    url: https://docs.google.com/document/d/1X2f_SBZrCmnorvUj0aoCQB0lyrVI3A7M9ZetS5rRB2A/edit?usp=sharing
+  - type: html
+    image:
+    title: Latin America and the Caribbean is home to 3 out of 5 children worldwide who lost an entire school year.
+    slug: school-closures
+    filepath: /Users/biancapallaro/Documents/Graphics Desk/example_new/content/output.html
+
+
+ 
