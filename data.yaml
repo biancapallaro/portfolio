@@ -1,5 +1,5 @@
 name: Bianca Pallaro
-bio: Data journalist at LA NACION DATA. I am currently pursuing a Master's Degree in Data Journalism at Columbia University.
+bio: Data journalist at LA NACION DATA. I am currently pursuing a Master's Degree in Data Journalism at Columbia University in New York.
 links:
   - target: mailto:biancapallaro@gmail.com
     text: Contact me
@@ -20,7 +20,7 @@ pages:
     image:
     title: Latin America and the Caribbean is home to 3 out of 5 children worldwide who lost an entire school year.
     slug: school-closures
-    filepath: /Users/biancapallaro/Documents/Graphics\ Desk/example_new/portfolio/content/output.html 
+    filepath: content/output.html 
 
 
  
