@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Scrollama: Sticky Overlay Example</title>
+    <meta name="description" content="Scrollama: Sticky Overlay Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" /> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <style>
+      #scrolly {
+        position: relative;
+        background-color: black;
+        padding: 1rem;
+      }
+
+      article {
+        position: relative;
+        padding: 0;
+        max-width: 20rem;
+        margin: 0 auto;
+      }
+
+      .sticky-thing {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        background-color: #8a8a8a;
+        z-index: 0;
+        top: 12.5vh;
+        height: 75vh;
+        /* Center everything inside */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('images/Image2.JPG') ;
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .sticky-thing p {
+        font-size: 8rem;
+        font-weight: 900;
+        color: #fff;
+      }
+
+      .step {
+        margin: 0 auto 2rem auto;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .step:last-child {
+        margin-bottom: 0;
+      }
+
+      .step.is-active p {
+        background-color: white;
+        color: #3b3b3b;
+        opacity: 0.8;
+      }
+
+      .step p {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.1rem;
+        background-color: #3b3b3b;
+        opacity: 0.8;
+
+      }
+
+      main{
+        background-color: black;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section id="intro">
+        <h1 class="intro__hed">Covid-19 has ripped through West Virginia’s coal industry</h1>
+        <br>
+        <p class="intro__dek">
+The pandemic accelerated the production decline and miners face a heightened risk of exposure and complications
+        </p>
+      </section>
+      
+      <section id="body">
+        <p class="intro_body">
+          BY: BIANCA PALLARO
+          <br>
+          <br>
+          The promises of rescue were already falling short.
+          <br>
+          <br>
+          Then came the pandemic.
+          <br>
+          <br>
+          For many Americans, COVID-19 meant working from home and dining out less, but all of those people staying in place drove down demand for energy.
+          <br>
+          <br>
+          West Virginia, the second-largest producer of coal in the country was hit the hardest.
+          <br>
+          <br>
+          The coal industry, already in decline before covid-19, reached its lowest production level since 1911, and West Virginia miners, who are considered “essential” workers by the state, are struggling to secure their safety as they are especially vulnerable to the coronavirus.        
+        </p>
+
+      </section>
+
+
+      <section id="scrolly">
+        <div class="sticky-thing">
+          <p></p>
+        </div>
+
+        <article>
+          <div class="step" data-step="1" data-image=url('images/Image3.JPG')>
+            <p>The competition with cheap natural gas, restrictions on pollution and the declining cost of renewable energy pose a well-known life-threatening risk for the coal industry. But the unprecedented fall in energy demand caused by covid-19 led to a decrease in coal production of 33.6% in West Virginia compared to 2019.</p>
+          </div>
+          <div class="step" data-step="2" data-image=url('images/Image4.JPG')>
+            <p>A report published by the U.S Energy Information Administration, projects that energy consumption will not return to 2019 levels until 2029. The study also predicts that coal and nuclear will keep falling by about half as renewables’ share of the electricity generation mix will more than double by 2050.</p>
+          </div>
+          <div class="step" data-step="3" data-image=url('images/Image5.JPG')>
+            <p>“Some mines actually did shut down, other mines went into rotating shifts, and others went on with an intermittent operating schedule. There was also a sudden outbreak within a certain percentage of the workforce that had to go through quarantine. It was difficult,” says Chris Hamilton, Vice President of the West Virginia Coal Association.</p>
+          </div>
+          <div class="step" data-step="4" data-image=url('images/Image6.JPG')>
+            <p>According to the Bureau of Labor Statistics, in the past year, employment in the coal industry fell to 38 thousand, the lowest level recorded in the past decade. Deskins points out that the area hardest hit by the job losses during the pandemic is the South West because they are the most dependent on coal.</p>
+          </div>
+        </article>
+      </section>
+
+      <section id="body_final">
+        <p class="final_body">
+          “It is a vicious cycle. Loss of coal jobs leads to outer migration. The younger and better educated are the first to leave, and the area is left with an older and less healthy generation. That often leads to drug abuse due to the lack of economic opportunities. Loss of economic activity makes the area less attractive,” explains Deskins.
+          <br>
+          <br>
+          But the Covid-19-induced economic downturn is not the only issue at stake in West Virginia. Despite several warnings from experts saying that miners face a heightened risk of exposure and complications from covid-19 due to their damaged lungs, the Governor announced in March that coal mining was an “essential” industry. One year later, there is still no official data about covid-19 transmissions in miners or a federal regulation to keep workers safe.
+         <br>
+          <br>
+          The main risk factor for miners is the black lung disease caused mainly by the long-term exposure to coal mines. “The problem is that there is no cure. Once you have it, it’s always going to get worse. So the miners are at increased risk of serious complications from covid-19 because they already have damaged lungs,” says Micheal McCawley, from the West Virginia University Department of Occupational and Environmental Health Sciences who studies miners’ health.
+          <br>
+          <br>
+          Since the start of the pandemic, the Mine and Safety Health Administration (MSHA) has failed to issue an Emergency Temporary Standard (ETS) that would require the employers to provide personal protective equipment to miners and develop a comprehensive infectious disease control plan and employee training.  A letter from August 14th written by the former Department of Labor Deputy Assistant, Secretary Joe Wheeler to West Virginia Senator Joe Manchin explained their decision: “At this time, MSHA has determined it lacks evidence that covid-19 poses a grave risk specific to miners.”
+          <br>
+          <br>
+          In response to the Government’s complacency, the United Mine Workers of America (UMWA) are promoting a bill introduced in Congress by two West Virginia senators. The legislation directs the Secretary of Labor to issue an emergency temporary standard and “requires operators to develop and implement a comprehensive infectious disease exposure control plan to protect miners from exposure to coronavirus”.
+          <br>
+          <br>
+          “Miners have been affected in a number of ways. They were designated essential personnel by the government, and they had to go to work every day, concerned about covid-19, and how it would affect their families, wife and kids. This puts a lot of stress on the individual,” says Rick Altman, United Mine Workers of America District 31 Vice President.
+          <br>
+          <br>
+          Even though the MSHA has not been keeping track of the number of miners that have contracted the virus, the UMWA said in a press release that 500 miners from the union have contracted the virus in the past 11 months. “Many have been hospitalized, some have died. The extent of infection in nonunion mines is not known. The UMWA only represents about 30% of all active hourly coal miners in the United States.”
+        </p>
+      </section>
+      
+      <section id="scrolly2">
+        <div class="sticky-thing2">
+          <p></p>
+        </div>
+
+    </main>
+
+    <!-- <div class='debug'></div> -->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script>
+      // using d3 for convenience
+      var main = document.querySelector("main");
+        var scrolly = main.querySelector("#scrolly");
+        var sticky = scrolly.querySelector(".sticky-thing");
+        var article = scrolly.querySelector("article");
+        var steps = article.querySelectorAll(".step");
+
+      // initialize the scrollama
+      var scroller = scrollama();
+
+      // scrollama event handlers
+      function handleStepEnter(response) {
+        // response = { element, direction, index }
+        var el = response.element;
+
+        // remove is-active from all steps
+        // then add is-active to this step
+        steps.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
+        // update graphic based on step
+        // sticky.querySelector("p").innerText = `Step number ${el.dataset.step}`;
+        sticky.style.backgroundImage = el.dataset.image;
+      }
+
+      function init() {
+        // 2. setup the scroller passing options
+        // 		this will also initialize trigger observations
+        // 3. bind scrollama event handlers (this can be chained like below)
+        scroller
+          .setup({
+            step: "#scrolly article .step",
+            offset: 0.33,
+            debug: true
+          })
+          .onStepEnter(handleStepEnter);
+;
+
+        // setup resize event
+        window.addEventListener("resize", scroller.resize);
+
+      }
+
+      // kick things off
+      init();
+    </script>
+  </body>
+</html>
