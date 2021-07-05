@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+      
+    <style>
+        body {
+            margin:auto;
+            padding:50px 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .serif {
+            font-family: 'Lora', serif;
+        }
+        .sans-serif {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        /* choose a light or dark theme to add to the body tag. */
+        .dark-theme {
+            background-color: #151515;
+            color: #fbfbfb;
+        }
+        .light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        .header {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .story-body, .header, .chart-section, .footer {
+            margin:auto;
+            max-width: 700px;
+        }
+
+        .footer {
+            padding-top:20px;
+            padding-bottom:20px;
+        }
+
+        .chart-section.wide{
+            width:100%;
+            max-width:1200px;
+        }
+
+        .chart-section.wide p.chart-title {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .chart-section.wide p.chart-subhead {
+            width:100%;
+            max-width:700px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+
+        /* text styles */
+
+        p.kicker {
+            font-size:1rem;
+            text-transform:uppercase;
+        }
+
+        .text-center {
+            text-align:center;
+        }
+
+        h1.headline {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+            margin-top: 1rem;
+            font-weight: 800;
+        }
+
+        h2.subhead {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom:0;
+            margin-top: 15px;
+            font-weight: 400;
+        }
+
+        p.body-text {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            margin-top:0;
+            margin-bottom:15px;
+        }
+
+        h3.section-head {
+            font-size:2rem;
+            margin:40px 0 10px 0;
+            font-weight:700;
+            line-height:1.3;
+        }
+
+        .byline {
+            font-size: 1.1rem;
+            line-height: 0.75;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 0.85rem;
+            line-height: 1;
+            margin-top: 10px;
+            font-weight:400;
+            text-transform:uppercase;
+            letter-spacing:0.5px;
+        }
+
+
+        p.note {
+            font-size:0.85rem;
+        }
+
+        /* chart styles */
+
+        .chart-section {
+            width:100%;
+            max-width:1200px;
+            padding:20px 0px;
+        }
+
+        .story-body .chart-section {
+            padding-top:0px;
+        }
+
+
+        .chart-row {
+            display:flex;
+            justify-content: space-between;
+            margin-top:20px;
+        }
+
+        p.chart-title {
+            font-size:1.3rem;
+            font-weight:700;
+            max-width:700px;
+            margin:0px auto 5px auto;
+        }
+        p.chart-subhead {
+            margin:0 auto;
+            max-width:700px;
+            font-size:1rem;
+            margin-bottom:15px;
+        }
+
+        p.chart-label {
+            margin:0 0 5px 0;
+            font-size:0.85rem;
+            text-transform:uppercase;
+            font-weight:600;
+        }
+
+        .chart-row .chart {
+            width:100%;
+            padding-right:15px;
+            min-width:calc(25% - 15px);
+
+        }
+
+
+
+        p.chart-source {
+            font-size:0.85rem;
+            margin:0;
+        }
+
+
+
+
+
+        /* photos */
+
+        .photo-section {
+            padding:30px 0px;
+            width:100%;
+            margin:auto;
+            display:flex;
+            max-width:1200px;
+        }
+
+        .photo {
+            width:100%;
+            padding-right:15px;
+        }
+        .photo img {
+            width:100%;	
+        }
+
+        p.caption {
+            font-size:0.9rem;
+            margin:0;
+        }
+
+
+
+        /* mobile */
+
+        @media (max-width:700px) {
+
+            .chart-row {
+                display:block;
+            }
+
+            .chart-row .chart {
+                padding:0;
+            }
+
+            .photo-section {
+                display:block;
+            }
+            .photo {
+                padding:0;
+            }
+
+        }
+    </style>
+    <style>
+        /* These are the styles for ai2html */
+        
+        #g-templates-laptop, #g-templates-medium, #g-templates-mobile {
+            display: none;
+        }
+
+        @media (max-width: 490px) {
+            #g-templates-mobile {
+                display: block;
+            }
+        }
+
+        @media (min-width: 490px) and (max-width: 620px) {
+            #g-templates-laptop {
+                display: block;
+            }
+        }
+
+        @media (min-width: 620px)  {
+            #g-templates-medium {
+                display: block;
+            }
+        }
+
+    </style>
+    
+    <!-- google fonts: Open Sans (sans-serif) and Lora (serif) -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap" rel="stylesheet">
+      
+    <title>This is your title</title>
+  </head>
+
+  <body class="light-theme"> <!-- all of the content on your html page goes inside the body -->
+
+    <div class="header">
+      <p class="kicker">TRY - Homework 5</p>
+      <h1 class="headline">How to use ai2html</h1>
+      <h2 class="subhead">ai2html turns your Illustrator files into HTML.</h2>
+      <p class="byline">By Bianca Pallaro</p>
+      <p class="date">Published September 9, 2019</p>
+    </div>
+
+    <div class="story-body">
+      <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="chart-section">
+        <div class="chart-row">
+          <div class="chart">
+
+
+
+
+            <!--- PASTE YOUR AI2HTML AFTER THIS LINE -->
+
+
+<!-- Generated by ai2html v0.101.0 - 2021-07-05 16:06 -->
+<!-- ai file: templates.ai -->
+<style media="screen,print">
+	#g-templates-box ,
+	#g-templates-box .g-artboard {
+		margin:0 auto;
+	}
+	#g-templates-box p {
+		margin:0;
+	}
+	#g-templates-box .g-aiAbs {
+		position:absolute;
+	}
+	#g-templates-box .g-aiImg {
+		position:absolute;
+		top:0;
+		display:block;
+		width:100% !important;
+	}
+	#g-templates-box .g-aiSymbol {
+		position: absolute;
+		box-sizing: border-box;
+	}
+	#g-templates-box .g-aiPointText p { white-space: nowrap; }
+	#g-templates-medium {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-templates-medium p {
+		font-family:Lato;
+		font-weight:700;
+		line-height:23px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:19px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-templates-medium .g-pstyle0 {
+		height:23px;
+	}
+	#g-templates-medium .g-pstyle1 {
+		font-weight:400;
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+	}
+	#g-templates-medium .g-pstyle2 {
+		font-weight:400;
+		line-height:17px;
+		font-size:14px;
+	}
+	#g-templates-medium .g-pstyle3 {
+		font-weight:500;
+		line-height:15px;
+		height:15px;
+		filter:alpha(opacity=0);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		opacity:0;
+		font-size:13px;
+	}
+	#g-templates-medium .g-pstyle4 {
+		font-weight:400;
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+	}
+	#g-templates-laptop {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-templates-laptop p {
+		font-family:Lato;
+		font-weight:700;
+		line-height:19px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:16px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-templates-laptop .g-pstyle0 {
+		height:19px;
+	}
+	#g-templates-laptop .g-pstyle1 {
+		font-weight:400;
+		line-height:18px;
+		height:18px;
+		font-size:15px;
+	}
+	#g-templates-laptop .g-pstyle2 {
+		font-weight:400;
+		line-height:13px;
+		font-size:11px;
+	}
+	#g-templates-laptop .g-pstyle3 {
+		font-weight:400;
+		line-height:16px;
+		height:16px;
+		font-size:13px;
+	}
+	#g-templates-laptop .g-pstyle4 {
+		font-weight:500;
+		line-height:15px;
+		height:15px;
+		filter:alpha(opacity=0);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		opacity:0;
+		font-size:13px;
+	}
+	#g-templates-laptop .g-pstyle5 {
+		font-weight:400;
+		line-height:15px;
+		height:15px;
+		font-size:13px;
+	}
+	#g-templates-laptop .g-pstyle6 {
+		font-weight:500;
+		line-height:13px;
+		height:13px;
+		filter:alpha(opacity=0);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+		opacity:0;
+		font-size:11px;
+	}
+	#g-templates-laptop .g-pstyle7 {
+		font-weight:400;
+		line-height:14px;
+		height:14px;
+		font-size:12px;
+	}
+	#g-templates-mobile {
+		position:relative;
+		overflow:hidden;
+	}
+	#g-templates-mobile p {
+		font-family:Lato;
+		font-weight:700;
+		line-height:13px;
+		height:auto;
+		filter:alpha(opacity=100);
+		-ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+		opacity:1;
+		letter-spacing:0em;
+		font-size:11px;
+		text-align:left;
+		color:rgb(0,0,0);
+		text-transform:none;
+		padding-bottom:0;
+		padding-top:0;
+		mix-blend-mode:normal;
+		font-style:normal;
+		position:static;
+	}
+	#g-templates-mobile .g-pstyle0 {
+		height:13px;
+		text-align:center;
+	}
+	#g-templates-mobile .g-pstyle1 {
+		font-weight:400;
+		line-height:10px;
+		height:10px;
+		font-size:9px;
+	}
+	#g-templates-mobile .g-pstyle2 {
+		font-weight:400;
+		height:13px;
+		text-align:center;
+	}
+	#g-templates-mobile .g-pstyle3 {
+		font-weight:400;
+		line-height:11px;
+		height:11px;
+		font-size:9px;
+	}
+
+</style>
+
+<div id="g-templates-box" class="ai2html">
+
+	<!-- Artboard: medium -->
+	<div id="g-templates-medium" class="g-artboard" style="width:620px; height:425px;" data-aspect-ratio="1.459" data-min-width="620">
+<div style=""></div>
+		<img id="g-templates-medium-img" class="g-aiImg" alt="" src="templates-medium.png"/>
+		<div id="g-ai0-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:11.6009%;margin-top:-23.3px;left:8.4556%;width:518px;">
+			<p class="g-pstyle0">Extreme weather fatalities: for the past ten years, heat has </p>
+			<p class="g-pstyle0">been the leading cause of death  </p>
+		</div>
+		<div id="g-ai0-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.1057%;margin-top:-9.4px;left:8.4924%;width:55px;">
+			<p class="g-pstyle1">Heat</p>
+		</div>
+		<div id="g-ai0-3" class="g-ai2html-settings g-aiAbs" style="top:22.3529%;left:89.7607%;width:9.5161%;">
+			<p class="g-pstyle2">1,074</p>
+		</div>
+		<div id="g-ai0-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:29.9881%;margin-top:-9.4px;left:7.7009%;width:60px;">
+			<p class="g-pstyle1">Flood</p>
+		</div>
+		<div id="g-ai0-5" class="g-ai2html-settings g-aiAbs" style="top:28.4706%;left:87.2581%;width:9.6774%;">
+			<p class="g-pstyle2">1,044</p>
+		</div>
+		<div id="g-ai0-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:35.8704%;margin-top:-9.4px;left:5.4385%;width:78px;">
+			<p class="g-pstyle1">Tornado</p>
+		</div>
+		<div id="g-ai0-7" class="g-ai2html-settings g-aiAbs" style="top:34.3529%;left:81.1847%;width:5.8065%;">
+			<p class="g-pstyle2">931</p>
+		</div>
+		<div id="g-ai0-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:41.7528%;margin-top:-9.4px;left:1.4516%;width:101px;">
+			<p class="g-pstyle1">Rip Current</p>
+		</div>
+		<div id="g-ai0-9" class="g-ai2html-settings g-aiAbs" style="top:40.2353%;left:60.2283%;width:5.8065%;">
+			<p class="g-pstyle2">650</p>
+		</div>
+		<div id="g-ai0-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:47.6351%;margin-top:-9.4px;left:8.1548%;width:59px;">
+			<p class="g-pstyle1">Wind</p>
+		</div>
+		<div id="g-ai0-11" class="g-ai2html-settings g-aiAbs" style="top:46.1176%;left:58.4027%;width:5.8065%;">
+			<p class="g-pstyle2">625</p>
+		</div>
+		<div id="g-ai0-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:53.5175%;margin-top:-9.4px;left:7.7018%;width:63px;">
+			<p class="g-pstyle1">Other</p>
+		</div>
+		<div id="g-ai0-13" class="g-ai2html-settings g-aiAbs" style="top:52%;left:47.7342%;width:5.9677%;">
+			<p class="g-pstyle2">481</p>
+		</div>
+		<div id="g-ai0-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:59.3998%;margin-top:-9.4px;left:8.6056%;width:54px;">
+			<p class="g-pstyle1">Cold</p>
+		</div>
+		<div id="g-ai0-15" class="g-ai2html-settings g-aiAbs" style="top:57.8824%;left:38.3281%;width:5.9677%;">
+			<p class="g-pstyle2">353</p>
+		</div>
+		<div id="g-ai0-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:65.2822%;margin-top:-9.4px;left:6.9123%;width:70px;">
+			<p class="g-pstyle1">Winter</p>
+		</div>
+		<div id="g-ai0-17" class="g-ai2html-settings g-aiAbs" style="top:63.7647%;left:33.8533%;width:5.9677%;">
+			<p class="g-pstyle2">293</p>
+		</div>
+		<div id="g-ai0-18" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.1654%;margin-top:-9.5px;left:4.5327%;width:85px;">
+			<p class="g-pstyle1">Lightning</p>
+		</div>
+		<div id="g-ai0-19" class="g-ai2html-settings g-aiAbs" style="top:69.6471%;left:33.3566%;width:5.9677%;">
+			<p class="g-pstyle2">287</p>
+		</div>
+		<div id="g-ai0-20" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.0469%;margin-top:-9.4px;left:3.9715%;width:90px;">
+			<p class="g-pstyle1">Hurricane</p>
+		</div>
+		<div id="g-ai0-21" class="g-ai2html-settings g-aiAbs" style="top:75.7647%;left:17.627%;width:5.9677%;">
+			<p class="g-pstyle2">55</p>
+		</div>
+		<div id="g-ai0-22" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.6351%;margin-top:-9.4px;left:16.6962%;width:31px;">
+			<p class="g-pstyle1">0</p>
+		</div>
+		<div id="g-ai0-23" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.6351%;margin-top:-9.4px;left:29.9577%;width:49px;">
+			<p class="g-pstyle1">200</p>
+		</div>
+		<div id="g-ai0-24" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.6351%;margin-top:-9.4px;left:44.7503%;width:49px;">
+			<p class="g-pstyle1">400</p>
+		</div>
+		<div id="g-ai0-25" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.6351%;margin-top:-9.4px;left:59.5431%;width:49px;">
+			<p class="g-pstyle1">600</p>
+		</div>
+		<div id="g-ai0-26" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.6351%;margin-top:-9.4px;left:74.3357%;width:49px;">
+			<p class="g-pstyle1">800</p>
+		</div>
+		<div id="g-ai0-27" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:83.6351%;margin-top:-9.4px;left:88.2802%;width:61px;">
+			<p class="g-pstyle1">1,000</p>
+		</div>
+		<div id="g-ai0-28" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.0893%;margin-top:-9.4px;left:22.5614%;width:43px;">
+			<p class="g-pstyle3">100</p>
+		</div>
+		<div id="g-ai0-29" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.0893%;margin-top:-9.4px;left:37.3541%;width:43px;">
+			<p class="g-pstyle3">300</p>
+		</div>
+		<div id="g-ai0-30" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.0893%;margin-top:-9.4px;left:52.1466%;width:43px;">
+			<p class="g-pstyle3">500</p>
+		</div>
+		<div id="g-ai0-31" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.0893%;margin-top:-9.4px;left:66.9393%;width:43px;">
+			<p class="g-pstyle3">700</p>
+		</div>
+		<div id="g-ai0-32" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.0893%;margin-top:-9.4px;left:81.7321%;width:43px;">
+			<p class="g-pstyle3">900</p>
+		</div>
+		<div id="g-ai0-33" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:84.0893%;margin-top:-9.4px;left:93.1316%;width:54px;">
+			<p class="g-pstyle3">1,100</p>
+		</div>
+		<div id="g-ai0-34" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:96.5329%;margin-top:-8.3px;left:1.4802%;width:288px;">
+			<p class="g-pstyle4">Source: National Weather Service - 2009-2019</p>
+		</div>
+	</div>
+
+	<!-- Artboard: laptop -->
+	<div id="g-templates-laptop" class="g-artboard" style="width:490px; height:350px;" data-aspect-ratio="1.4" data-min-width="490" data-max-width="619">
+<div style=""></div>
+		<img id="g-templates-laptop-img" class="g-aiImg" alt="" src="templates-laptop.png"/>
+		<div id="g-ai1-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:10.4116%;margin-top:-19.4px;left:5.3882%;width:440px;">
+			<p class="g-pstyle0">Extreme weather fatalities: for the past ten years, heat has </p>
+			<p class="g-pstyle0">been the leading cause of death  </p>
+		</div>
+		<div id="g-ai1-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:23.2567%;margin-top:-9.4px;left:5.4133%;width:55px;">
+			<p class="g-pstyle1">Heat</p>
+		</div>
+		<div id="g-ai1-3" class="g-ai2html-settings g-aiAbs" style="top:21.7143%;left:89.5888%;width:8.1633%;">
+			<p class="g-pstyle2">1,074</p>
+		</div>
+		<div id="g-ai1-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:29.2302%;margin-top:-9.3px;left:4.8386%;width:60px;">
+			<p class="g-pstyle1">Flood</p>
+		</div>
+		<div id="g-ai1-5" class="g-ai2html-settings g-aiAbs" style="top:28.2857%;left:86.7072%;width:7.7551%;">
+			<p class="g-pstyle2">1,044</p>
+		</div>
+		<div id="g-ai1-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:35.5159%;margin-top:-9.3px;left:3.2759%;width:77px;">
+			<p class="g-pstyle1">Tornado</p>
+		</div>
+		<div id="g-ai1-7" class="g-ai2html-settings g-aiAbs" style="top:34.2857%;left:81.2098%;width:5.7143%;">
+			<p class="g-pstyle2">931</p>
+		</div>
+		<div id="g-ai1-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:41.5159%;margin-top:-9.3px;left:1.4545%;width:100px;">
+			<p class="g-pstyle1">Rip Current</p>
+		</div>
+		<div id="g-ai1-9" class="g-ai2html-settings g-aiAbs" style="top:40.5714%;left:60.8263%;width:5.7143%;">
+			<p class="g-pstyle2">650</p>
+		</div>
+		<div id="g-ai1-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:47.8016%;margin-top:-9.3px;left:5.292%;width:58px;">
+			<p class="g-pstyle1">Wind</p>
+		</div>
+		<div id="g-ai1-11" class="g-ai2html-settings g-aiAbs" style="top:46.5714%;left:59.3185%;width:5.7143%;">
+			<p class="g-pstyle2">625</p>
+		</div>
+		<div id="g-ai1-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:54.0873%;margin-top:-9.3px;left:4.8396%;width:62px;">
+			<p class="g-pstyle1">Other</p>
+		</div>
+		<div id="g-ai1-13" class="g-ai2html-settings g-aiAbs" style="top:52.8571%;left:49.0776%;width:5.7143%;">
+			<p class="g-pstyle2">481</p>
+		</div>
+		<div id="g-ai1-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:60.1512%;margin-top:-9.5px;left:5.7131%;width:53px;">
+			<p class="g-pstyle1">Cold</p>
+		</div>
+		<div id="g-ai1-15" class="g-ai2html-settings g-aiAbs" style="top:58.8571%;left:39.4473%;width:5.7143%;">
+			<p class="g-pstyle2">353</p>
+		</div>
+		<div id="g-ai1-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:66.373%;margin-top:-9.3px;left:4.0509%;width:69px;">
+			<p class="g-pstyle1">Winter</p>
+		</div>
+		<div id="g-ai1-17" class="g-ai2html-settings g-aiAbs" style="top:64.8571%;left:35.3403%;width:5.7143%;">
+			<p class="g-pstyle2">293</p>
+		</div>
+		<div id="g-ai1-18" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:72.6599%;margin-top:-9.3px;left:1.6743%;width:84px;">
+			<p class="g-pstyle1">Lightning</p>
+		</div>
+		<div id="g-ai1-19" class="g-ai2html-settings g-aiAbs" style="top:71.1429%;left:34.8585%;width:5.7143%;">
+			<p class="g-pstyle2">287</p>
+		</div>
+		<div id="g-ai1-20" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:78.6588%;margin-top:-9.3px;left:1.1141%;width:89px;">
+			<p class="g-pstyle1">Hurricane</p>
+		</div>
+		<div id="g-ai1-21" class="g-ai2html-settings g-aiAbs" style="top:77.1429%;left:20.0071%;width:5.7143%;">
+			<p class="g-pstyle2">55</p>
+		</div>
+		<div id="g-ai1-22" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:85.2376%;margin-top:-8.3px;left:88.5491%;width:52px;">
+			<p class="g-pstyle3">1,000</p>
+		</div>
+		<div id="g-ai1-23" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:85.8451%;margin-top:-9.5px;left:93.2553%;width:50px;">
+			<p class="g-pstyle4">1,100</p>
+		</div>
+		<div id="g-ai1-24" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:85.3061%;margin-top:-7.6px;left:19.104%;width:29px;">
+			<p class="g-pstyle5">0</p>
+		</div>
+		<div id="g-ai1-25" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:85.3061%;margin-top:-7.6px;left:31.9695%;width:42px;">
+			<p class="g-pstyle5">200</p>
+		</div>
+		<div id="g-ai1-26" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:85.3061%;margin-top:-7.6px;left:46.3202%;width:42px;">
+			<p class="g-pstyle5">400</p>
+		</div>
+		<div id="g-ai1-27" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:85.3061%;margin-top:-7.6px;left:60.6704%;width:42px;">
+			<p class="g-pstyle5">600</p>
+		</div>
+		<div id="g-ai1-28" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:85.3061%;margin-top:-7.6px;left:75.0211%;width:42px;">
+			<p class="g-pstyle5">800</p>
+		</div>
+		<div id="g-ai1-29" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:86.0575%;margin-top:-8.2px;left:24.7939%;width:38px;">
+			<p class="g-pstyle6">100</p>
+		</div>
+		<div id="g-ai1-30" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:86.0575%;margin-top:-8.2px;left:39.1446%;width:38px;">
+			<p class="g-pstyle6">300</p>
+		</div>
+		<div id="g-ai1-31" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:86.0575%;margin-top:-8.2px;left:53.4953%;width:38px;">
+			<p class="g-pstyle6">500</p>
+		</div>
+		<div id="g-ai1-32" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:86.0575%;margin-top:-8.2px;left:67.846%;width:38px;">
+			<p class="g-pstyle6">700</p>
+		</div>
+		<div id="g-ai1-33" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:86.0575%;margin-top:-8.2px;left:82.1967%;width:38px;">
+			<p class="g-pstyle6">900</p>
+		</div>
+		<div id="g-ai1-34" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:96.3556%;margin-top:-7.2px;left:2.2993%;width:268px;">
+			<p class="g-pstyle7">Source: National Weather Service - 2009-2019</p>
+		</div>
+	</div>
+
+	<!-- Artboard: mobile -->
+	<div id="g-templates-mobile" class="g-artboard" style="max-width: 266px;max-height: 375px" data-aspect-ratio="0.709" data-min-width="0" data-max-width="489">
+<div style="padding: 0 0 140.9774% 0;"></div>
+		<img id="g-templates-mobile-img" class="g-aiImg" alt="" src="templates-mobile.png"/>
+		<div id="g-ai2-1" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:6.4891%;margin-top:-13.3px;left:50.5762%;margin-left:-133px;width:266px;">
+			<p class="g-pstyle0">Extreme weather fatalities: for the past ten years, </p>
+			<p class="g-pstyle0">heat has been the leading cause of death  </p>
+		</div>
+		<div id="g-ai2-2" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:12.7978%;margin-top:-5px;left:8.0741%;width:44px;">
+			<p class="g-pstyle1">1,100</p>
+		</div>
+		<div id="g-ai2-3" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:18.6645%;margin-top:-5px;left:8.0741%;width:44px;">
+			<p class="g-pstyle1">1,000</p>
+		</div>
+		<div id="g-ai2-4" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:24.5311%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">900</p>
+		</div>
+		<div id="g-ai2-5" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:30.3978%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">800</p>
+		</div>
+		<div id="g-ai2-6" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:36.5311%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">700</p>
+		</div>
+		<div id="g-ai2-7" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:42.3978%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">600</p>
+		</div>
+		<div id="g-ai2-8" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:48.2645%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">500</p>
+		</div>
+		<div id="g-ai2-9" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:54.1311%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">400</p>
+		</div>
+		<div id="g-ai2-10" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:60.2645%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">300</p>
+		</div>
+		<div id="g-ai2-11" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:66.1311%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">200</p>
+		</div>
+		<div id="g-ai2-12" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:71.9978%;margin-top:-5px;left:10.6282%;width:37px;">
+			<p class="g-pstyle1">100</p>
+		</div>
+		<div id="g-ai2-13" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:77.8645%;margin-top:-5px;left:11.8717%;width:27px;">
+			<p class="g-pstyle1">0</p>
+		</div>
+		<div id="g-ai2-14" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:83.8641%;margin-top:-6.5px;left:75.1368%;margin-left:-27.5px;width:55px;">
+			<p class="g-pstyle2">Winter</p>
+		</div>
+		<div id="g-ai2-15" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:83.3307%;margin-top:-6.5px;left:61.096%;margin-left:-25px;width:50px;">
+			<p class="g-pstyle2">Other</p>
+		</div>
+		<div id="g-ai2-16" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:83.0641%;margin-top:-6.5px;left:53.112%;margin-left:-23.5px;width:47px;">
+			<p class="g-pstyle2">Wind</p>
+		</div>
+		<div id="g-ai2-17" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:85.9974%;margin-top:-6.5px;left:89.6406%;margin-left:-34.5px;width:69px;">
+			<p class="g-pstyle2">Hurricane</p>
+		</div>
+		<div id="g-ai2-18" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:82.7974%;margin-top:-6.5px;left:23.6492%;margin-left:-22.5px;width:45px;">
+			<p class="g-pstyle2">Heat</p>
+		</div>
+		<div id="g-ai2-19" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:87.0641%;margin-top:-6.5px;left:45.8961%;margin-left:-38px;width:76px;">
+			<p class="g-pstyle2">Rip Current</p>
+		</div>
+		<div id="g-ai2-20" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7009851846281%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7009851846281%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7009851846281%;top:85.7314%;margin-top:-6.5px;left:82.3476%;margin-left:-32.5px;width:65px;">
+			<p class="g-pstyle2">Lightning</p>
+		</div>
+		<div id="g-ai2-21" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:85.1974%;margin-top:-6.5px;left:38.3329%;margin-left:-30px;width:60px;">
+			<p class="g-pstyle2">Tornado</p>
+		</div>
+		<div id="g-ai2-22" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:82.7974%;margin-top:-6.5px;left:68.0233%;margin-left:-22px;width:44px;">
+			<p class="g-pstyle2">Cold</p>
+		</div>
+		<div id="g-ai2-23" class="g-ai2html-settings g-aiAbs g-aiPointText" style="transform: matrix(0,-1,1,0,0,0);transform-origin: 50% 57.7038820343064%;-webkit-transform: matrix(0,-1,1,0,0,0);-webkit-transform-origin: 50% 57.7038820343064%;-ms-transform: matrix(0,-1,1,0,0,0);-ms-transform-origin: 50% 57.7038820343064%;top:83.5974%;margin-top:-6.5px;left:31.1283%;margin-left:-24px;width:48px;">
+			<p class="g-pstyle2">Flood</p>
+		</div>
+		<div id="g-ai2-24" class="g-ai2html-settings g-aiAbs g-aiPointText" style="top:97.7823%;margin-top:-5.7px;left:2.9435%;width:206px;">
+			<p class="g-pstyle3">Source: National Weather Service - 2009-2019</p>
+		</div>
+	</div>
+
+</div>
+
+<!-- End ai2html - 2021-07-05 16:06 -->
+
+
+
+
+
+
+
+        </div>
+        </div>
+    </div>
+
+    <div class="story-body">
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="body-text serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+      
+  </body>
+</html>
