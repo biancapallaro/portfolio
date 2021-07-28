@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Scrollama: Sticky Overlay Example</title>
+    <meta name="description" content="Scrollama: Sticky Overlay Example" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #scrolly {
+        position: relative;
+      }
+
+      article {
+        position: relative;
+        padding: 0;
+        max-width: 30rem;
+        margin: 0 auto;
+        padding-bottom: 10rem;
+      }
+
+      .sticky-thing {
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 0;
+  
+
+        /* Make 75%, centered */
+        top: 12.5vh;
+        height: 75vh;
+
+        /* Make full-height */
+        top: 0vh;
+        height: 100vh;
+
+        /* Center everything inside */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .step {
+        margin: 0 auto 20rem auto;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .step:last-child {
+        margin-bottom: 0;
+      }
+
+      .step.is-active {
+        background-color: rgba(0, 0, 0, 1);
+      }
+
+      .step p {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+
+      #intro p {
+        font-size: 0.75em;
+        padding: 15px;
+      }
+    </style>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+
+      <section id="intro">
+        <h1>Bronx is the only borough where new HIV diagnoses are on the rise</h1>
+        <p>Experts attribute the high HIV prevalence to socio-economic factors, stigma and failure of prevention efforts among young people in the area</p>
+      </section>
+
+      <section id="body">
+        <p class="intro_body">
+          <br>
+          BY: BIANCA PALLARO
+          <br>
+          <br>
+          A young patient walks into the doctor's office at a sexual health center in the Bronx. He quietly sits on the chair, lays his hands on the desk and begins bouncing his right leg while waiting for instructions. He interrupts the silence by cracking his knuckles and looks around the room with his head down to avoid eye contact. The doctor begins asking questions but he nods at him instead of answering. After a few seconds, he says: “I am sorry doc, I am not here for STD testing, I wanted to know more about HIV treatments.”
+          <br>
+          <br>          
+          The patient is just one of the 31,280 people living with HIV in the Bronx. Every year, New York City is closer to achieving its goal to end the HIV epidemic. In 2019, new HIV diagnoses fell to historic levels and New Yorkers with HIV are living longer lives as they become more virally suppressed. But behind these optimistic figures hides a long-standing inequality: the Bronx is the only borough where new HIV diagnoses are increasing.
+          <br>
+          <br> 
+          Since 2015, the Bronx became the borough with the highest HIV rate in the City and it is now the only area where new HIV diagnoses are on the rise. Most experts attribute the high HIV prevalence to socio-economic factors, stigma and failure of prevention efforts among young people in the Bronx.
+          <br>
+          <br> 
+          “I can tell some of my patients are embarrassed to talk about sexual health,” says Raffaele Bernardo, infectious disease specialist at the Montefiore Health System in the Bronx. “Stigma is one of the most significant barriers to accessing care and treatment. And of course, there is also poverty and inequalities that play even a larger role.”
+          
+                  
+        </p>
+
+      </section>
+
+
+      <section id="scrolly">
+        <div class="sticky-thing">
+          <div id="chart"></div>
+        </div>
+
+        <article>
+          <div class="step" id="step-1">
+            <p>Poverty in New York City mirrors HIV rate. Poverty increases the vulnerability to HIV and prevents access to health care and treatment. <strong>So as poverty rate goes up, so do new HIV diagnoses.</strong></p>
+          </div>
+          <div class="step" id="step-2">
+            <p>Bronx residents are the only group who experienced an increase in HIV diagnoses in the past year and since 2015, it became the borough with the highest new HIV diagnoses rate in the City</p>
+          </div>
+          <div class="step" id="step-3">
+            <p>The three poorest neighborhoods with the highest HIV rates are located in the Bronx: <strong>HighBridge -Morrisania, Crotona-Tremont and Hunts -Point Haven </strong> Those are also the neighborhoods with the lowest proportions of virally suppressed people living with HIV.</p>
+          </div>
+          <div class="step" id="step-3">
+          </div>
+          <div><!-- spacer --></div>
+        </article>
+      </section>
+
+      <section id="body_final">
+        <p class="final_body">
+          The Bronx has been historically the most underserved borough in New York City. “High rates of poverty, housing instability, unemployment, food insecurity means that healthcare becomes less of a priority in individuals' lives,” says Patrick McGovern, Amida Care’s chief of business development. “That leads to decreased health access and higher rates of chronic medical conditions, including HIV.”          
+          <br>
+          <br>
+          “Poor people are not more likely to be risky, but poverty shapes risk, it increases the likelihood to be exposed to that risk,” clarifies Vincent Guilamo-Ramos, director of NYU Center for Latino Adolescent and Family Health. 
+          <br>
+          <br>
+          In New York City, minority communities are disproportionately impacted by poverty, further contributing to elevated contextual HIV risk. More than 90% of new HIV diagnoses in the city are among minority residents. Last year in the Bronx, the borough with the largest proportion of Latino residents, only 10 White residents were diagnosed with HIV out of all 466.
+          <br>
+          <br>
+          “Minorities are affected by factors that determine lower levels of access to health care and HIV preventive measures,” says Luis A. Mares, director of Community Mobilization at the Latino Commission on AIDS.
+          <br>
+          <br>
+          The factors described by Mares include low economic status, lack of services tailored in a cultural and linguistically appropriate way, and place of residence. In the Bronx, there are fewer primary care providers than any other borough. The majority of the neighborhoods are designated by Health Resources and Services Administration as underserved medical and health professional shortage areas.
+          <br>
+          <br>
+          Data from NYC Health also proves that most venues that actively distribute free safer sex products and pre-exposure prophylaxis clinics are located in Manhattan. Less than 20% of those centers are found in the Bronx.
+          <br>
+          <br>
+          The residents under 30 are disproportionately affected by the lack of access to sexual health care. “Young people have too often been invisible in the fight against HIV. As a result, HIV prevention and treatment efforts are too often misaligned with the unique needs of youth,” says Guilamo-Ramos.
+          <br>
+          <br>
+​           In fact, the increase in new HIV diagnoses in the Bronx is primarily driven by young people. Among people aged 30 and older, new HIV Diagnoses remain stable, but for younger Bronx residents, HIV diagnoses increased by 17% in just one year.
+          <br>
+          <br>
+          Dr. Bernardo believes one possible way to revert this trend is to “bring up the conversation. The more you talk about something, the more likely you are to remove stigma.” He thinks it is key to “assure patient confidentiality and create a sex positive environment that will allow patients to open up.”
+          <br>
+          <br>
+          Even though the HIV epidemic is almost over, “more should be done” to eradicate structural racism and all the social factors that perpetuate the inequity. “We need targeted efforts, almost zip code by zip code, to address those social determinants. HIV is as much a function of where you live as of who you are and what you do,” says McGovern.
+        </p>
+      </section>  
+      <section id="outro"></section>
+    </main>
+
+    <!-- <div class='debug'></div> -->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      // using d3 for convenience
+      var main = document.querySelector("main");
+      var scrolly = main.querySelector("#scrolly");
+      var article = scrolly.querySelector("article");
+      var steps = article.querySelectorAll(".step");
+
+      // initialize the scrollama
+      var scroller = scrollama();
+
+      function handleStepEnter(response) {
+        const el = response.element;
+        const dir = response.direction;
+
+        // Remove is-active from all steps then add is-active to this step
+        steps.forEach(step => step.classList.remove('is-active'));
+        el.classList.add('is-active');
+
+        d3.select(el).dispatch('stepin');
+      }
+
+      function handleStepExit(response) {
+        const el = response.element;
+        const dir = response.direction;
+        if(dir === "up") {
+          d3.select(el).dispatch('stepout')
+        }
+      }
+
+      function init() {
+        // 2. setup the scroller passing options
+        // 		this will also initialize trigger observations
+        // 3. bind scrollama event handlers (this can be chained like below)
+        scroller
+          .setup({
+            step: "#scrolly article .step",
+            offset: 0.5,
+            debug: false
+          })
+          .onStepEnter(handleStepEnter)
+          .onStepExit(handleStepExit);
+
+        // setup resize event
+        window.addEventListener("resize", scroller.resize);
+      }
+
+      // kick things off
+      init();
+    </script>
+
+    <script src="hiv.js"></script>
+  </body>
+</html>
